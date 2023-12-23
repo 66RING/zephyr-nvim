@@ -44,6 +44,10 @@ local zephyr = {
   bracket = '#80A0C2';
   currsor_bg = '#4f5b66';
   none = 'NONE';
+
+  diff_add = '#0e381b';
+  diff_del = '#591111';
+  diff_mod = '#87610a';
 }
 
 function zephyr.terminal_color()
@@ -97,10 +101,10 @@ function zephyr.load_syntax()
     LineNr = {fg=zephyr.base4};
     qfLineNr = {fg=zephyr.cyan};
     CursorLineNr = {fg=zephyr.blue};
-    DiffAdd = {fg=zephyr.black,bg=zephyr.dark_green};
-    DiffChange = {fg=zephyr.black,bg=zephyr.yellow};
-    DiffDelete = {fg=zephyr.black,bg=zephyr.red};
-    DiffText = {fg=zephyr.black,bg=zephyr.fg};
+    DiffAdd = {bg=zephyr.diff_add};
+    DiffChange = {bg=zephyr.diff_mod};
+    DiffDelete = {bg=zephyr.diff_del};
+    DiffText = {bg=zephyr.bg1};
     Directory = {fg=zephyr.blue,bg=zephyr.none};
     ErrorMsg = {fg=zephyr.red,bg=zephyr.none,style='bold'};
     WarningMsg = {fg=zephyr.yellow,bg=zephyr.none,style='bold'};
@@ -333,3 +337,4 @@ end
 zephyr.colorscheme()
 
 return zephyr
+
