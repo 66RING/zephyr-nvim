@@ -26,6 +26,7 @@ local zephyr = {
 
   redwine = '#d16d9e';
   orange = '#D98E48';
+  light_orange = '#ff9e64';
   yellow = '#f0c674';
 
   light_green = '#abcf84';
@@ -99,7 +100,7 @@ local syntax = {
   ErrorMsg = { fg = zephyr.red, bg = zephyr.none, bold = true },
   WarningMsg = { fg = zephyr.yellow, bg = zephyr.none, bold = true },
   ModeMsg = { fg = zephyr.fg, bg = zephyr.none, bold = true },
-  MatchParen = { fg = zephyr.red, bg = zephyr.none },
+  MatchParen = { fg = zephyr.light_orange, bg = zephyr.bg, bold = true },
 
 
   NonText = { fg = zephyr.bg1 },
@@ -177,7 +178,7 @@ local syntax = {
 }
 
 local plugin_syntax = {
-  ["@function"]                        = { fg = zephyr.cyan },
+  ["@function"]                        = { fg = zephyr.yellow },
   ["@method"]                          = { fg = zephyr.cyan },
   ["@keyword.function"]                = { fg = zephyr.green },
   ["@property"]                        = { fg = zephyr.yellow },
@@ -329,7 +330,10 @@ function zephyr.colorscheme()
   vim.o.termguicolors = true
   vim.g.colors_name = "zephyr"
   set_hl(syntax)
-  async_load_plugin:send()
+  -- async_load_plugin:send()
+
+  -- TODO:
+  set_hl(plugin_syntax)
 end
 
 zephyr.colorscheme()
