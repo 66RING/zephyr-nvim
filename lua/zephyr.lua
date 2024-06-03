@@ -77,7 +77,6 @@ local syntax = {
   VertSplit = { fg = zephyr.black, bg = zephyr.bg },
   Folded = { fg = zephyr.grey, bg = zephyr.bg_highlight },
   EndOfBuffer = { fg = zephyr.bg, bg = zephyr.none },
-  -- TODO: review: ,style=zephyr.none
   IncSearch = { fg = zephyr.bg1, bg = zephyr.orange },
   Search = { fg = zephyr.bg, bg = zephyr.orange },
   ColorColumn = { fg = zephyr.none, bg = zephyr.bg_highlight },
@@ -180,11 +179,11 @@ local syntax = {
 local plugin_syntax = {
   ["@function"]                        = { fg = zephyr.cyan },
   ["@method"]                          = { fg = zephyr.cyan },
-  ["@keyword.function"]                = { fg = zephyr.red },
+  ["@keyword.function"]                = { fg = zephyr.green },
   ["@property"]                        = { fg = zephyr.yellow },
   ["@type"]                            = { fg = zephyr.teal },
   ["@variable"]                        = { fg = zephyr.blue },
-  ["@punctuation.bracket"]             = { fg = zephyr.dark_green },
+  ["@punctuation.bracket"]             = { fg = zephyr.fg },
 
   TSFunction = {fg=zephyr.cyan};
   TSMethod = {fg=zephyr.cyan};
