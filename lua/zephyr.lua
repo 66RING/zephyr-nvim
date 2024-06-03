@@ -3,52 +3,52 @@
 -- License: MIT
 -- Source: http://github.com/glepnir/zephyr-nvim
 local zephyr = {
-  base0      = '#1B2229';
-  base1      = '#1c1f24';
-  base2      = '#202328';
-  base3      = '#23272e';
-  base4      = '#3f444a';
-  base5      = '#5B6268';
-  base6      = '#73797e';
-  base7      = '#9ca0a4';
-  base8      = '#b1b1b1';
+  base0        = '#1B2229',
+  base1        = '#1c1f24',
+  base2        = '#202328',
+  base3        = '#23272e',
+  base4        = '#3f444a',
+  base5        = '#5B6268',
+  base6        = '#73797e',
+  base7        = '#9ca0a4',
+  base8        = '#b1b1b1',
 
-  bg = '#282a36';
-  bg1 = '#504945';
-  bg_popup = '#3E4556';
-  bg_highlight  = '#2E323C';
-  bg_visual = '#b3deef';
+  bg           = '#282a36',
+  bg1          = '#504945',
+  bg_popup     = '#3E4556',
+  bg_highlight = '#2E323C',
+  bg_visual    = '#b3deef',
 
-  fg = '#bbc2cf';
-  fg_alt  = '#5B6268';
+  fg           = '#bbc2cf',
+  fg_alt       = '#5B6268',
 
-  red = '#e95678';
+  red          = '#e95678',
 
-  redwine = '#d16d9e';
-  orange = '#D98E48';
-  light_orange = '#ff9e64';
-  yellow = '#f0c674';
+  redwine      = '#d16d9e',
+  orange       = '#D98E48',
+  light_orange = '#ff9e64',
+  yellow       = '#f0c674',
 
-  light_green = '#abcf84';
-  green = '#afd700';
-  dark_green = '#98be65';
+  light_green  = '#abcf84',
+  green        = '#afd700',
+  dark_green   = '#98be65',
 
-  cyan = '#36d0e0';
-  blue = '#61afef';
-  violet = '#b294bb';
-  magenta = '#c678dd',
-  teal = '#1abc9c';
-  grey = '#928374';
-  brown = '#c78665';
-  black = '#000000';
+  cyan         = '#36d0e0',
+  blue         = '#61afef',
+  violet       = '#b294bb',
+  magenta      = '#c678dd',
+  teal         = '#1abc9c',
+  grey         = '#928374',
+  brown        = '#c78665',
+  black        = '#000000',
 
-  bracket = '#80A0C2';
-  currsor_bg = '#4f5b66';
-  none = 'NONE';
+  bracket      = '#80A0C2',
+  currsor_bg   = '#4f5b66',
+  none         = 'NONE',
 
-  diff_add = '#0e381b';
-  diff_del = '#591111';
-  diff_mod = '#87610a';
+  diff_add     = '#0e381b',
+  diff_del     = '#591111',
+  diff_mod     = '#87610a',
 }
 
 function zephyr.terminal_color()
@@ -186,127 +186,127 @@ local plugin_syntax = {
   ["@variable"]                        = { fg = zephyr.blue },
   ["@punctuation.bracket"]             = { fg = zephyr.fg },
 
-  TSFunction = {fg=zephyr.cyan};
-  TSMethod = {fg=zephyr.cyan};
-  TSKeywordFunction = {fg=zephyr.red};
-  TSProperty = {fg=zephyr.yellow};
-  TSType = {fg=zephyr.teal};
-  TSVariable = {fg=zephyr.blue};
-  TSPunctBracket = {fg=zephyr.bracket};
+  TSFunction                           = { fg = zephyr.cyan },
+  TSMethod                             = { fg = zephyr.cyan },
+  TSKeywordFunction                    = { fg = zephyr.red },
+  TSProperty                           = { fg = zephyr.yellow },
+  TSType                               = { fg = zephyr.teal },
+  TSVariable                           = { fg = zephyr.blue },
+  TSPunctBracket                       = { fg = zephyr.bracket },
 
-  vimCommentTitle = {fg=zephyr.grey,bold=true};
-  vimLet = {fg=zephyr.orange};
-  vimVar = {fg=zephyr.cyan};
-  vimFunction = {fg=zephyr.redwine};
-  vimIsCommand = {fg=zephyr.fg};
-  vimCommand = {fg=zephyr.blue};
-  vimNotFunc = {fg=zephyr.violet,bold=true};
-  vimUserFunc = {fg=zephyr.yellow,bold=true};
-  vimFuncName= {fg=zephyr.yellow,bold=true};
+  vimCommentTitle                      = { fg = zephyr.grey, bold = true },
+  vimLet                               = { fg = zephyr.orange },
+  vimVar                               = { fg = zephyr.cyan },
+  vimFunction                          = { fg = zephyr.redwine },
+  vimIsCommand                         = { fg = zephyr.fg },
+  vimCommand                           = { fg = zephyr.blue },
+  vimNotFunc                           = { fg = zephyr.violet, bold = true },
+  vimUserFunc                          = { fg = zephyr.yellow, bold = true },
+  vimFuncName                          = { fg = zephyr.yellow, bold = true },
 
-  diffAdded = {fg = zephyr.dark_green};
-  diffRemoved = {fg =zephyr.red};
-  diffChanged = {fg = zephyr.blue};
-  diffOldFile = {fg = zephyr.yellow};
-  diffNewFile = {fg = zephyr.orange};
-  diffFile    = {fg = zephyr.aqua};
-  diffLine    = {fg = zephyr.grey};
-  diffIndexLine = {fg = zephyr.violet};
+  diffAdded                            = { fg = zephyr.dark_green },
+  diffRemoved                          = { fg = zephyr.red },
+  diffChanged                          = { fg = zephyr.blue },
+  diffOldFile                          = { fg = zephyr.yellow },
+  diffNewFile                          = { fg = zephyr.orange },
+  diffFile                             = { fg = zephyr.aqua },
+  diffLine                             = { fg = zephyr.grey },
+  diffIndexLine                        = { fg = zephyr.violet },
 
-  gitcommitSummary = {fg = zephyr.red};
-  gitcommitUntracked = {fg = zephyr.grey};
-  gitcommitDiscarded = {fg = zephyr.grey};
-  gitcommitSelected = { fg=zephyr.grey};
-  gitcommitUnmerged = { fg=zephyr.grey};
-  gitcommitOnBranch = { fg=zephyr.grey};
-  gitcommitArrow  = {fg = zephyr.grey};
-  gitcommitFile  = {fg = zephyr.dark_green};
+  gitcommitSummary                     = { fg = zephyr.red },
+  gitcommitUntracked                   = { fg = zephyr.grey },
+  gitcommitDiscarded                   = { fg = zephyr.grey },
+  gitcommitSelected                    = { fg = zephyr.grey },
+  gitcommitUnmerged                    = { fg = zephyr.grey },
+  gitcommitOnBranch                    = { fg = zephyr.grey },
+  gitcommitArrow                       = { fg = zephyr.grey },
+  gitcommitFile                        = { fg = zephyr.dark_green },
 
-  VistaBracket = {fg=zephyr.grey};
-  VistaChildrenNr = {fg=zephyr.orange};
-  VistaKind = {fg=zephyr.purpl};
-  VistaScope = {fg=zephyr.red};
-  VistaScopeKind = {fg=zephyr.blue};
-  VistaTag = {fg=zephyr.magenta,bold=true};
-  VistaPrefix = {fg=zephyr.grey};
-  VistaColon = {fg=zephyr.magenta};
-  VistaIcon = {fg=zephyr.yellow};
-  VistaLineNr = {fg=zephyr.fg};
+  VistaBracket                         = { fg = zephyr.grey },
+  VistaChildrenNr                      = { fg = zephyr.orange },
+  VistaKind                            = { fg = zephyr.purpl },
+  VistaScope                           = { fg = zephyr.red },
+  VistaScopeKind                       = { fg = zephyr.blue },
+  VistaTag                             = { fg = zephyr.magenta, bold = true },
+  VistaPrefix                          = { fg = zephyr.grey },
+  VistaColon                           = { fg = zephyr.magenta },
+  VistaIcon                            = { fg = zephyr.yellow },
+  VistaLineNr                          = { fg = zephyr.fg },
 
-  GitGutterAdd = {fg=zephyr.dark_green};
-  GitGutterChange = {fg=zephyr.blue};
-  GitGutterDelete = {fg=zephyr.red};
-  GitGutterChangeDelete = {fg=zephyr.violet};
+  GitGutterAdd                         = { fg = zephyr.dark_green },
+  GitGutterChange                      = { fg = zephyr.blue },
+  GitGutterDelete                      = { fg = zephyr.red },
+  GitGutterChangeDelete                = { fg = zephyr.violet },
 
-  GitSignsAdd = {fg=zephyr.dark_green};
-  GitSignsChange = {fg=zephyr.blue};
-  GitSignsDelete = {fg=zephyr.red};
-  GitSignsAddNr = {fg=zephyr.dark_green};
-  GitSignsChangeNr = {fg=zephyr.blue};
-  GitSignsDeleteNr = {fg=zephyr.red};
-  GitSignsAddLn = {bg=zephyr.bg_popup};
-  GitSignsChangeLn = {bg=zephyr.bg_highlight};
-  GitSignsDeleteLn = {bg=zephyr.bg1};
+  GitSignsAdd                          = { fg = zephyr.dark_green },
+  GitSignsChange                       = { fg = zephyr.blue },
+  GitSignsDelete                       = { fg = zephyr.red },
+  GitSignsAddNr                        = { fg = zephyr.dark_green },
+  GitSignsChangeNr                     = { fg = zephyr.blue },
+  GitSignsDeleteNr                     = { fg = zephyr.red },
+  GitSignsAddLn                        = { bg = zephyr.bg_popup },
+  GitSignsChangeLn                     = { bg = zephyr.bg_highlight },
+  GitSignsDeleteLn                     = { bg = zephyr.bg1 },
 
-  SignifySignAdd = {fg=zephyr.dark_green};
-  SignifySignChange = {fg=zephyr.blue};
-  SignifySignDelete = {fg=zephyr.red};
+  SignifySignAdd                       = { fg = zephyr.dark_green },
+  SignifySignChange                    = { fg = zephyr.blue },
+  SignifySignDelete                    = { fg = zephyr.red },
 
-  dbui_tables = {fg=zephyr.blue};
+  dbui_tables                          = { fg = zephyr.blue },
 
-  LspDiagnosticsSignError = {fg=zephyr.red};
-  LspDiagnosticsSignWarning = {fg=zephyr.yellow};
-  LspDiagnosticsSignInformation = {fg=zephyr.blue};
-  LspDiagnosticsSignHint = {fg=zephyr.cyan};
+  LspDiagnosticsSignError              = { fg = zephyr.red },
+  LspDiagnosticsSignWarning            = { fg = zephyr.yellow },
+  LspDiagnosticsSignInformation        = { fg = zephyr.blue },
+  LspDiagnosticsSignHint               = { fg = zephyr.cyan },
 
-  LspDiagnosticsFloatingError = {fg=zephyr.red};
-  LspDiagnosticsFloatingWarning= {fg=zephyr.yellow};
-  LspDiagnosticsFloatingInformation = {fg=zephyr.blue};
-  LspDiagnosticsFloatingHint = {fg=zephyr.cyan};
+  LspDiagnosticsFloatingError          = { fg = zephyr.red },
+  LspDiagnosticsFloatingWarning        = { fg = zephyr.yellow },
+  LspDiagnosticsFloatingInformation    = { fg = zephyr.blue },
+  LspDiagnosticsFloatingHint           = { fg = zephyr.cyan },
 
-  LspDiagnosticsVirtualTextError = {fg=zephyr.red};
-  LspDiagnosticsVirtualTextWarning= {fg=zephyr.yellow};
-  LspDiagnosticsVirtualTextInformation = {fg=zephyr.blue};
-  LspDiagnosticsVirtualTextHint = {fg=zephyr.cyan};
+  LspDiagnosticsVirtualTextError       = { fg = zephyr.red },
+  LspDiagnosticsVirtualTextWarning     = { fg = zephyr.yellow },
+  LspDiagnosticsVirtualTextInformation = { fg = zephyr.blue },
+  LspDiagnosticsVirtualTextHint        = { fg = zephyr.cyan },
 
-  LspDiagnosticsUnderlineError = {undercurl=true,sp=zephyr.red};
-  LspDiagnosticsUnderlineWarning = {undercurl=true,sp=zephyr.yellow};
-  LspDiagnosticsUnderlineInformation = {undercurl=true,sp=zephyr.blue};
-  LspDiagnosticsUnderlineHint = {undercurl=true,sp=zephyr.cyan};
+  LspDiagnosticsUnderlineError         = { undercurl = true, sp = zephyr.red },
+  LspDiagnosticsUnderlineWarning       = { undercurl = true, sp = zephyr.yellow },
+  LspDiagnosticsUnderlineInformation   = { undercurl = true, sp = zephyr.blue },
+  LspDiagnosticsUnderlineHint          = { undercurl = true, sp = zephyr.cyan },
 
-  LspReferenceRead = {bg=zephyr.bg_highlight,bold=true};
-  LspReferenceText = {bg=zephyr.bg_highlight,bold=true};
-  LspReferenceWrite = {bg=zephyr.bg_highlight,bold=true};
+  LspReferenceRead                     = { bg = zephyr.bg_highlight, bold = true },
+  LspReferenceText                     = { bg = zephyr.bg_highlight, bold = true },
+  LspReferenceWrite                    = { bg = zephyr.bg_highlight, bold = true },
 
-  CursorWord0 = {bg=zephyr.currsor_bg};
-  CursorWord1 = {bg=zephyr.currsor_bg};
+  CursorWord0                          = { bg = zephyr.currsor_bg },
+  CursorWord1                          = { bg = zephyr.currsor_bg },
 
-  NvimTreeFolderName = {fg=zephyr.blue};
-  NvimTreeRootFolder = {fg=zephyr.red,bold=true};
-  NvimTreeSpecialFile = {fg=zephyr.fg,bg=zephyr.none};
+  NvimTreeFolderName                   = { fg = zephyr.blue },
+  NvimTreeRootFolder                   = { fg = zephyr.red, bold = true },
+  NvimTreeSpecialFile                  = { fg = zephyr.fg, bg = zephyr.none },
 
-  TelescopeBorder = {fg=zephyr.teal};
-  TelescopePromptBorder = {fg=zephyr.blue};
-  TelescopeMatching = {fg=zephyr.teal};
-  TelescopeSelection = {fg=zephyr.yellow,bg=zephyr.bg_highlight,bold=true};
-  TelescopeSelectionCaret = {fg=zephyr.yellow};
-  TelescopeMultiSelection = {fg=zephyr.teal};
+  TelescopeBorder                      = { fg = zephyr.teal },
+  TelescopePromptBorder                = { fg = zephyr.blue },
+  TelescopeMatching                    = { fg = zephyr.teal },
+  TelescopeSelection                   = { fg = zephyr.yellow, bg = zephyr.bg_highlight, bold = true },
+  TelescopeSelectionCaret              = { fg = zephyr.yellow },
+  TelescopeMultiSelection              = { fg = zephyr.teal },
 
   -- nvim v0.6.0+
-  DiagnosticSignError = {fg=zephyr.red};
-  DiagnosticSignWarn = {fg=zephyr.yellow};
-  DiagnosticSignInfo = {fg=zephyr.blue};
-  DiagnosticSignHint = {fg=zephyr.cyan};
+  DiagnosticSignError                  = { fg = zephyr.red },
+  DiagnosticSignWarn                   = { fg = zephyr.yellow },
+  DiagnosticSignInfo                   = { fg = zephyr.blue },
+  DiagnosticSignHint                   = { fg = zephyr.cyan },
 
-  DiagnosticVirtualTextError = {fg=zephyr.red};
-  DiagnosticVirtualTextWarn = {fg=zephyr.yellow};
-  DiagnosticVirtualTextInfo = {fg=zephyr.blue};
-  DiagnosticVirtualTextHint = {fg=zephyr.cyan};
+  DiagnosticVirtualTextError           = { fg = zephyr.red },
+  DiagnosticVirtualTextWarn            = { fg = zephyr.yellow },
+  DiagnosticVirtualTextInfo            = { fg = zephyr.blue },
+  DiagnosticVirtualTextHint            = { fg = zephyr.cyan },
 
-  DiagnosticUnderlineError = {undercurl=true,sp=zephyr.red};
-  DiagnosticUnderlineWarn = {undercurl=true,sp=zephyr.yellow};
-  DiagnosticUnderlineInfo = {undercurl=true,sp=zephyr.blue};
-  DiagnosticUnderlineHint = {undercurl=true,sp=zephyr.cyan};
+  DiagnosticUnderlineError             = { undercurl = true, sp = zephyr.red },
+  DiagnosticUnderlineWarn              = { undercurl = true, sp = zephyr.yellow },
+  DiagnosticUnderlineInfo              = { undercurl = true, sp = zephyr.blue },
+  DiagnosticUnderlineHint              = { undercurl = true, sp = zephyr.cyan },
 }
 
 local async_load_plugin
@@ -339,6 +339,3 @@ end
 zephyr.colorscheme()
 
 return zephyr
-
-
-
